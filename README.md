@@ -1,0 +1,1 @@
+# Page_Object [![Build status](https://ci.appveyor.com/api/projects/status/cn84x6endbjemuje?svg=true)](https://ci.appveyor.com/project/Kisulen/page-object)

@@ -18,11 +18,15 @@ public class CardTopUpPage {
         topUpHeading.shouldBe(Condition.visible);
     }
 
-    public DashboardPage shouldTransferMoney(DataHelper.CardNumber cardNumber) {
-        amount.setValue("100");
-        cardFrom.setValue(cardNumber.getCardNumber());
-        topUpButton.click();
-        return new DashboardPage();
 
+    public DashboardPage shouldTransfer(String amountToTransfer, DataHelper.CardInfo cardInfo) {
+        makeTransfer(amountToTransfer, cardInfo);
+        return new DashboardPage();
+    }
+
+    public void makeTransfer(String amountToTransfer, DataHelper.CardInfo cardInfo) {
+        amount.setValue(amountToTransfer);
+        cardFrom.setValue(cardInfo.getCardNumber());
+        topUpButton.click();
     }
 }
